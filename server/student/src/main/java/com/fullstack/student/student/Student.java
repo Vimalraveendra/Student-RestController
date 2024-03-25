@@ -1,8 +1,23 @@
 package com.fullstack.student.student;
 
-import java.time.LocalDate;
+import jakarta.persistence.*;
 
+import java.time.LocalDate;
+@Entity
+@Table(name = "sms")
 public class Student {
+    @Id
+    @SequenceGenerator(
+            name = "student_management_sequence",
+            sequenceName = "student_management_sequence",
+            allocationSize = 1
+
+    )
+    @GeneratedValue(
+            strategy = GenerationType.SEQUENCE,
+            generator = "student_management_sequence"
+    )
+
     private Long id;
     private String name;
     private Integer age;
