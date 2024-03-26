@@ -9,14 +9,14 @@ import java.util.List;
 @RestController
 @RequestMapping("/api/v1/students")
 public class StudentController {
-    private StudentServiceImp studentServiceImp;
+    private StudentService studentService;
     @Autowired
-    public StudentController(StudentServiceImp studentServiceImp){
-        this.studentServiceImp=studentServiceImp;
+    public StudentController(StudentService studentService){
+        this.studentService=studentService;
     }
     @GetMapping
     public List<Student> getStudents(){
-        return  studentServiceImp.getStudents();
+        return  studentService.getStudents();
     }
 
 }
