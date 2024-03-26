@@ -1,9 +1,10 @@
-package com.fullstack.student.student;
+package com.fullstack.student.controller;
 
+import com.fullstack.student.entity.Student;
+import com.fullstack.student.service.StudentService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
-import java.time.LocalDate;
 import java.util.List;
 
 @RestController

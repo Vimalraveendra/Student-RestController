@@ -1,4 +1,4 @@
-package com.fullstack.student.student;
+package com.fullstack.student.entity;
 
 import jakarta.persistence.*;
 
