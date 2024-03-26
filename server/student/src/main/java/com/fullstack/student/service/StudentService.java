@@ -1,4 +1,6 @@
-package com.fullstack.student.student;
+package com.fullstack.student.service;
+
+import com.fullstack.student.entity.Student;
 
 import java.util.List;
 

@@ -1,5 +1,7 @@
-package com.fullstack.student.student;
+package com.fullstack.student.service;
 
+import com.fullstack.student.entity.Student;
+import com.fullstack.student.service.StudentService;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDate;
