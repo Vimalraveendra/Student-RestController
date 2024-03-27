@@ -1,6 +1,7 @@
 package com.fullstack.student.service;
 
 import com.fullstack.student.entity.Student;
+import com.fullstack.student.repository.StudentRepository;
 import com.fullstack.student.service.StudentService;
 import org.springframework.stereotype.Service;
 
@@ -8,6 +9,11 @@ import java.time.LocalDate;
 import java.util.List;
 @Service
 public class StudentServiceImp implements StudentService {
+    private final StudentRepository studentRepository;
+
+    public StudentServiceImp(StudentRepository studentRepository){
+       this.studentRepository=studentRepository;
+    }
     @Override
     public List<Student>getStudents() {
         return List.of(
@@ -26,7 +32,8 @@ public class StudentServiceImp implements StudentService {
                         LocalDate.of(2004, 03, 15)
                 )
         );
+        studentRepository.saveAll()
     }
-
+ repo
 
 }

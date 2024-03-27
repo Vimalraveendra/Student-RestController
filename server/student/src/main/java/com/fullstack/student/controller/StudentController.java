@@ -20,4 +20,9 @@ public class StudentController {
         return  studentService.getStudents();
     }
 
+    @PostMapping
+    public void registerNewStudent(@RequestBody Student student){
+        studentService.addNewStudent(student);
+    }
+
 }
